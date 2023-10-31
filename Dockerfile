@@ -51,3 +51,13 @@ RUN apt-get update -y && \
   rm -rf /var/lib/apt/lists/* && \
   # Smoke test
   node -v
+
+# Install Yarn
+
+# renovate: datasource=github-tags depName=yarnpkg/yarn extractVersion=^v(?<version>.*)$
+ENV YARN_VERSION=1.22.19
+
+RUN npm install -g yarn@${YARN_VERSION} --ignore-scripts && \
+  npm cache clean --force && \
+  # Smoke test
+  yarn --version

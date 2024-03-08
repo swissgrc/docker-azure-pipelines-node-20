@@ -8,6 +8,11 @@
       "matchDepNames": [ "ghcr.io/swissgrc/azure-pipelines-dotnet" ],
       "description": "No .NET SDK Major Updates",      
       "extends": [ ":disableMajorUpdates" ]
+    },
+    {
+      "matchDepNames": [ "nodejs/node" ],
+      "description": "No Node Major Updates",      
+      "extends": [ ":disableMajorUpdates" ]
     }
   ]
 }
